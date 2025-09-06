@@ -15,12 +15,47 @@
     <label style="margin-top:10px">User Code (optional)</label>
     <input id="userCode" class="input" placeholder="ABC123"/>
 
-    <div class="row" style="margin-top:12px">
+    <label style="margin-top:10px"><input id="autoPrompt" type="checkbox"> Auto-prompt on checkout</label>
+
+    <label style="margin-top:10px">Risk threshold
+      <select id="riskThreshold" class="input" style="max-width:120px">
+        <option value="1">Medium+</option>
+        <option value="2">High only</option>
+      </select>
+    </label>
+
+    <label style="margin-top:10px"><input id="autoPrice" type="checkbox"> Auto-detect price on checkout pages</label>
+
+    <label style="margin-top:10px"><input id="autoAbandon" type="checkbox"> Auto-save when I leave checkout (no purchase)</label>
+
+    <label style="margin-top:10px"><input id="noBodyScan" type="checkbox"> Strict privacy: do not scan page body text (title/metadata only)</label>
+
+    <label style="margin-top:10px">Max text scan length (characters)
+      <input id="maxScanChars" class="input" placeholder="8000" inputmode="numeric" style="max-width:120px"/>
+    </label>
+
+    <hr style="margin:12px 0;border:none;border-top:1px solid #e5e7eb">
+    <p class="muted">
+      Privacy: this extension reads page <b>title</b> and (optionally) a small portion of visible text on checkout-like pages
+      to guess category and price. It never reads payment fields or blocks purchases. You control auto-prompt, thresholds,
+      price detection, auto-abandon, and scanning limits here.
+    </p>
+
+    <div class="row" style="margin-top:8px">
       <button id="saveOpts" class="btn btn-primary">Save Settings</button>
+      <button id="eraseExt" class="btn">Erase extension data</button>
       <span id="status" class="muted"></span>
     </div>
-  </div>
 
+    <hr style="margin:12px 0;border:none;border-top:1px solid #e5e7eb">
+    <h2 style="font-size:14px;margin:0 0 8px 0">Classifier Self-Test (for WAICY)</h2>
+    <p class="muted">Run on a small labeled set to report Accuracy, Precision/Recall, and Confusion Matrix.</p>
+    <div class="row">
+      <button id="runTest" class="btn">Run test</button>
+      <span id="testStatus" class="muted"></span>
+    </div>
+    <pre id="testReport" style="white-space:pre-wrap;font-size:12px;line-height:1.4;border:1px solid #e5e7eb;border-radius:8px;padding:8px;margin-top:8px;max-height:240px;overflow:auto"></pre>
+  </div>
   <script src="options.js"></script>
 </body>
 </html>

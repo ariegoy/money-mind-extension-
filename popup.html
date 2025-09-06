@@ -8,35 +8,24 @@
 <body>
   <div class="wrap">
     <h1>Save Instead</h1>
-
     <div class="row">
       <input id="amount" class="input" placeholder="Amount e.g. 12.00" inputmode="decimal"/>
       <button id="saveBtn" class="btn btn-primary">Save</button>
     </div>
-
     <div class="row">
       <select id="category" class="input">
-        <option value="coffee">Coffee</option>
-        <option value="food">Food delivery</option>
-        <option value="shopping">Shopping</option>
-        <option value="transport">Transport</option>
-        <option value="gaming">Gaming</option>
-        <option value="other" selected>Other</option>
+        <option value="coffee">Coffee</option><option value="food">Food delivery</option>
+        <option value="shopping">Shopping</option><option value="transport">Transport</option>
+        <option value="gaming">Gaming</option><option value="other" selected>Other</option>
       </select>
     </div>
-
-    <div class="row">
-      <input id="notes" class="input" placeholder="Notes (optional)"/>
-    </div>
-
+    <div class="row"><input id="notes" class="input" placeholder="Notes (optional)"/></div>
     <div id="riskLine" class="muted"></div>
-
     <div class="row space-between">
       <a href="options.html" target="_blank">Options</a>
       <span id="status" class="muted"></span>
     </div>
   </div>
-
   <script src="popup.js"></script>
 </body>
 </html>

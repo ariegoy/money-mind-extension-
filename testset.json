@@ -1,0 +1,17 @@
+{
+  "labels": ["coffee","food","shopping","transport","gaming","other"],
+  "samples": [
+    { "host":"www.amazon.com",      "title":"Amazon Cart - Checkout",             "label":"shopping" },
+    { "host":"www.ebay.com",        "title":"Order Summary",                      "label":"shopping" },
+    { "host":"www.starbucks.com",   "title":"Latte Checkout",                     "label":"coffee" },
+    { "host":"www.ubereats.com",    "title":"Checkout — Order delivery",          "label":"food" },
+    { "host":"www.doordash.com",    "title":"Place Order",                        "label":"food" },
+    { "host":"www.grubhub.com",     "title":"Burger order summary",               "label":"food" },
+    { "host":"www.uber.com",        "title":"Ride fare payment",                  "label":"transport" },
+    { "host":"www.lyft.com",        "title":"Dropoff checkout",                   "label":"transport" },
+    { "host":"store.steampowered.com","title":"Buy DLC — add to cart",           "label":"gaming" },
+    { "host":"www.playstation.com", "title":"Purchase coins",                     "label":"gaming" },
+    { "host":"www.nike.com",        "title":"Add to Bag — Checkout",              "label":"shopping" },
+    { "host":"www.example.com",     "title":"Generic page",                       "label":"other" }
+  ]
+}
